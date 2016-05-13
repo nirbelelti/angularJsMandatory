@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mandatory">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src = "node_modules/angular/angular.min.js"></script>
+
+    <script>
+        angular.module("mandatory",[]);
+    </script>
+
+
+</head>
+<body>
+
+<form novalidate name="signInForm"  ng-submit="saveForm()" >
+
+
+<div>
+        <label for="date" >Date Of Birth</label>
+
+            <input type="text"  id="date" placeholder="Date" required ng-model="mandatory.date"
+                   name="date"/>
+
+
+
+      <span class="error" ng-show="signInForm.date.$error.date || signInForm.date.$error.required
+      && signInForm.$submitted">
+          <span style="color: red">
+           Full date are required
+              </span>
+       </span>
+           <span class="error" ng-show="" >
+            {{ serverResponse.error }}
+        </span>
+
+</div>
+
+<div>
+
+        <label for="firstName" >First Name</label>
+
+            <input type="fName" class="form-control" id="firstName" placeholder="Type in your First Name"
+                   required ng-model="mandatory.fName" name="firstName "/>
+
+
+            <span class="error" ng-show="signInForm.firstName.$error.required
+      && signInForm.$submitted">
+                <span style="color: red">
+           First name are required
+                    </span>
+       </span>
+
+</div>
+
+
+    <div>
+
+        <label for="lastName" >Last Name</label>
+
+            <input type="lName" class="form-control" id="lastName" placeholder="Type in your Last Name"
+                   required ng-model="mandatory.lName" name="lastName "/>
+
+
+                <span class="error" ng-show="signInForm.lastName.$error.required
+                && signInForm.$submitted">
+                    <span style="color: red">
+           Last name are required
+                        </span>
+       </span>
+
+    </div>
+
+    <div>
+        <label for="eMail" >E-Mail</label>
+
+            <input type="email" class="form-control" id="eMail" placeholder="Type in your kea mail address"
+                   required ng-model="mandatory.eMail" name="eMail "/>
+
+
+                <span class="error" ng-show="signInForm.eMail.$error.email || signInForm.eMail.$error.required
+                && signInForm.$submitted">
+                    <span style="color: red">
+           Email address are required
+                        </span>
+       </span>
+
+    </div>
+
+   <div>
+        <label for="phoneNO" >Phone No</label>
+
+            <input type="number" class="form-control" id="phoneNO" placeholder="Type in your phone number"
+                   required ng-model="mandatory.phoneNo" name="phoneNo "/>
+
+
+                <span class="error" ng-show="signInForm.phoneNo.$error.required
+                && signInForm.$submitted">
+                    <span style="color: red">
+           Phone number  are required
+                        </span>
+       </span>
+
+    </div>
+
+
+    <div>
+    <B>I am a:...</B> <BR>
+    <SELECT NAME="Gender">
+        <OPTION SELECTED> Male
+        <OPTION> Female
+
+    </SELECT>
+
+    </div>
+
+
+
+<div>
+        <label  class="col-sm-2 control-label">Im interested to meet : </label>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-5">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Man
+                </label>
+                <label>
+                    <input type="checkbox"> Woman
+                </label>
+                <label>
+                    <input type="checkbox"> Both
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <B>Some question about myselfe.</B> <BR>
+    <SELECT NAME="Question1">
+        <OPTION SELECTED> Bla bala
+        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
+
+    </SELECT>
+
+</div>
+
+    <div>
+    <B>Some question about myselfe.</B> <BR>
+    <SELECT NAME="Question1">
+        <OPTION SELECTED> Bla bala
+        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
+
+    </SELECT>
+
+    </div>
+
+    <div>
+
+    <B>Some question about my hobby.</B> <BR>
+    <SELECT NAME="Question2">
+        <OPTION SELECTED> Bla bala
+        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
+
+    </SELECT>
+    </div>
+
+    <div>
+    <B>Some question about my favorite sport.</B> <BR>
+    <SELECT NAME="Question3">
+        <OPTION SELECTED> Bla bala
+        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
+
+    </SELECT>
+
+    </div>
+
+    <!--and some more of those.....-->
+
+
+
+
+    <button type="submit"  >
+
+                   </span>Submit</button>
+
+    <button type="button" ng-click="deleteInternship()">
+
+    </button>
+
+
+
+
+
+</form>
+
+
+</body>
+</html>

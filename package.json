@@ -1,0 +1,16 @@
+{
+  "name": "mandatory2",
+  "version": "1.0.0",
+  "description": "angular and node mandatory assigment",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "npm": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nir",
+  "license": "ISC"
+}
