@@ -1,3 +1,19 @@
-/**
- * Created by Velislav on 18-May-16.
- */
+angular.module('mandatory').
+    config(function($stateProvider, $urlProvider){
+
+    $urlRouterProvider.otherwise('/registrationForm');
+
+    $stateProvider
+
+        .state('questionnaireForm',{
+        url:'/questionnaireForm',
+        templateUrl: 'views/questionnaireForm.html',
+        controller:'FormRegistrationCTRL'
+        })
+
+        .state('profile',{
+            url:'/profile',
+            templateUrl:'views/profile.html',
+            controller:''
+        })
+});
