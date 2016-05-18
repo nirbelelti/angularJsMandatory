@@ -4,7 +4,11 @@ angular.module('mandatory').
     $urlRouterProvider.otherwise('/registrationForm');
 
     $stateProvider
-
+        .state('registrationForm',{
+        url:'/registrationForm',
+        templateUrl:'views/registrationForm',
+        controller:''
+    })
         .state('questionnaireForm',{
         url:'/questionnaireForm',
         templateUrl: 'views/questionnaireForm.html',
