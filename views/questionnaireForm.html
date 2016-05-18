@@ -1,39 +1,55 @@
+<section>
+    <form name="myform"
+          ng-submit="register()"
+          novalidate>
 
-<form novalidate name="signInForm"  ng-submit="saveForm()" >
-<div>
-    <label for="date" >Date Of Birth</label>
+        <div>
+            <h1>Fill out the following questions to continue</h1>
+            <p>It will help to find better matches for you</p>
+        </div>
 
-    <input type="text"  id="date" placeholder="Date" required ng-model="mandatory.date"
-           name="date"/>
+        <fieldset>
+            <input type="date" name="birthdate"
+                   placeholder="Birth date"
+                   ng-model="user.birthdate"
+                   ng-required="true">
+            <p class="error validationerror" ng-show="myform.birthdate.$invalid && myform.birthdate.$touched">
+                You must fill out your birth date.</p>
+
+            Are you:
+            <input type="text" name="gender"
+                   placeholder="Please choose..."
+                   ng-model="user.gender"
+                   ng-required="true">
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+                You must fill out your last name.</p>
+
+
+            <input type="email" name="email"
+                   placeholder="Email"
+                   ng-model="user.email">
+            <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
+                This must be a valid email.</p>
 
 
 
-      <span class="error" ng-show="signInForm.date.$error.date || signInForm.date.$error.required
-      && signInForm.$submitted">
-          <span style="color: red">
-           Full date are required
-              </span>
-       </span>
-           <span class="error" ng-show="" >
-            {{ serverResponse.error }}
-        </span>
+            <input type="password" name="password"
+                   placeholder="Password"
+                   ng-model="user.password"
+                   ng-minlength="6">
+            <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
+                Password must be at least 6 characters</p>
+        </fieldset>
 
-</div>
-<div>
-    <label for="phoneNO" >Phone No</label>
-
-    <input type="number" class="form-control" id="phoneNO" placeholder="Type in your phone number"
-           required ng-model="mandatory.phoneNo" name="phoneNo "/>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</section>
 
 
-                <span class="error" ng-show="signInForm.phoneNo.$error.required
-                && signInForm.$submitted">
-                    <span style="color: red">
-           Phone number  are required
-                        </span>
-       </span>
-
-</div>
 
 
 <div>
