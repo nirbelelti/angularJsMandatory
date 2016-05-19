@@ -17,20 +17,20 @@
     <script src="node_modules/underscore/underscore-min.js"></script>
 
     <script>
-        angular.module("mandatory",['ui.router']);
+        angular.module("mandatory", ['ui.router', 'ngResource']);
     </script>
 
-    <script src="app/navigation.js"></script>
     <script src="app/controllers/FormRegistrationCTRL.js"></script>
+    <script src="app/navigation.js"></script>
 
 </head>
-<body>
+<body ng-controller="FormRegistrationCTRL">
 
 <nav>
-    <div><a href="#">MatchUp</a></div>
+    <div><a href="index.html">MatchUp</a></div>
     <ul>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Profile</a></li>
+        <li><a ui-sref="registrationForm">Register</a></li>
+        <li><a ui-sref="profile">Profile</a></li>
     </ul>
 </nav>
 

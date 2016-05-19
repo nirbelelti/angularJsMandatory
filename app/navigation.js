@@ -5,9 +5,9 @@ angular.module('mandatory').
 
     $stateProvider
         .state('registrationForm',{
-        url:'/registrationForm',
-        templateUrl:'views/registrationForm',
-        controller:''
+        url: '/registrationForm',
+        templateUrl: 'views/registrationForm.html',
+        controller: ''
     })
         .state('questionnaireForm',{
         url:'/questionnaireForm',
@@ -18,6 +18,7 @@ angular.module('mandatory').
         .state('profile',{
             url:'/profile',
             templateUrl:'views/profile.html',
-            controller:''
-        })
+            controller:'',
+            params: { internshipParameter: null }
+        });
 });
