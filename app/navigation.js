@@ -1,5 +1,5 @@
 angular.module('mandatory').
-    config(function($stateProvider, $urlProvider){
+    config(function($stateProvider, $urlRouterProvider){
 
     $urlRouterProvider.otherwise('/registrationForm');
 

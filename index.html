@@ -4,24 +4,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Mandatory assignment</title>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
     <script src = "node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <script>
-        angular.module("mandatory",[]);
-    </script>
+    <script>angular.module("mandatory",['ui.router']);</script>
 
+    <script src="app/navigation.js"></script>
+    <script src="app/controllers/FormRegistrationCTRL.js"></script>
 
 </head>
 <body>
 
-<div>
-    <!--Here goes the page content  fx. ng-view ... -->
+<div class="container"
+     ui-view="">
+
 </div>
 
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
