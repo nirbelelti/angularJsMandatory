@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="mandatory">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Mandatory assignment</title>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 
-    <script src = "node_modules/angular/angular.min.js"></script>
+
+    <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/underscore/underscore-min.js"></script>
 
-    <script>angular.module("mandatory",['ui.router']);</script>
+    <script>
+        angular.module("mandatory",['ui.router']);
+    </script>
 
     <script src="app/navigation.js"></script>
     <script src="app/controllers/FormRegistrationCTRL.js"></script>
@@ -28,12 +34,15 @@
     </ul>
 </nav>
 
-<div class="container"
-     ui-view="">
+<div class="container">
+
+    <div ui-view=""></div>
 
 </div>
 
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
 
 </body>
 </html>
