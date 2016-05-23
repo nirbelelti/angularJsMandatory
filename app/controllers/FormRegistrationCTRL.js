@@ -4,20 +4,37 @@
 
 angular.module("mandatory").
 controller("FormRegistrationCTRL",
-    function($scope, $state, $resource) {
+    function($scope, $state, $resource, $http) {
+    $scope.user={};
 
-        $scope.editUserProfile = function(mandatory) {
+        $scope.register = function() {
             //this should navigate sending the registration to the new state.
-            $state.go("",
-                {mandatory:mandatory});
 
+
+            $http({ method: "POST",
+                data: $scope.user,
+                url: "http://angularkea1.azurewebsites.net/api/internships/Create/"})
+                .success(function(data) {
+                    console.log(data);
+
+                    //$scope.$parent.dummyInternships.push($scope.internship);
+                    //delete the internship from the local array, dummyInternships.
+
+                    $state.go("questionnaireForm");
+                }).error(function(data) {
+            });
         };
+
+
+    });
+
+
 
 
     var today = new Date();
 
     //configured $resource
-    $scope.usersResource =
+    /*$scope.usersResource =
     $resource(
         "http://angularkea2.azurewebsites.net/api/internships/:id",
         { id: "@id" },
@@ -32,9 +49,7 @@ controller("FormRegistrationCTRL",
         $scope.dummyUsers = data;
     }, function(data) {
         //something went wrong....
-    });
-
-    });
+    });*/
 
 
 
