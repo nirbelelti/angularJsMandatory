@@ -9,13 +9,20 @@
         </div>
 
         <fieldset class="form-group">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" name="firstname" class="form-control"
                    placeholder="First Name"
                    ng-model="user.initials"
                    ng-required="true">   <!--Change ng-model = user.initials to ng-model = user.firstname when API is working -->
-            <p class="error" validationerror
-               ng-show="regForm.firstname.$invalid && regForm.firstname.$touched">
-                You must fill out your first name.</p>
+                    </div>
+                    <p class="error" validationerror
+                       ng-show="regForm.firstname.$invalid && regForm.firstname.$touched">
+                        You must fill out your first name.</p>
+                </div>
+
         </fieldset>
 
         <fieldset class="form-group">
