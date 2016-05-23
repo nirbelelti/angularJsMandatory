@@ -13,3 +13,37 @@ controller("FormRegistrationCTRL",
 
         }
     });
+
+    var today = new Date();
+
+    //configured $resource
+    $scope.usersResource =
+    $resource(
+        "http://nodedb.herokuapp.com/users:id",
+        { id: "@id" },
+        {
+            update: { method: 'PUT' }
+        }
+    );
+
+    //retrieve all internships
+    $scope.usersResource.query(
+    function(data) {
+        $scope.dummyUsers = data;
+    }, function(data) {
+        //something went wrong....
+    });
+
+
+
+    //$http({ method: "GET",
+    //    url: "http://nodedb.herokuapp.com/users/getAll" })
+    //    .success(function(data) {
+    //        console.log(data);
+    //        $scope.dummyUsers = data;
+    //
+    //
+    //    }).error(function(data) {
+    //
+    //    });
+
