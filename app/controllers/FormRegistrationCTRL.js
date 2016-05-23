@@ -4,22 +4,22 @@
 
 angular.module("mandatory").
 controller("FormRegistrationCTRL",
-    function($scope, $state) {
+    function($scope, $state, $resource) {
 
         $scope.editUserProfile = function(mandatory) {
             //this should navigate sending the registration to the new state.
             $state.go("",
                 {mandatory:mandatory});
 
-        }
-    });
+        };
+
 
     var today = new Date();
 
     //configured $resource
     $scope.usersResource =
     $resource(
-        "http://nodedb.herokuapp.com/users:id",
+        "http://angularkea2.azurewebsites.net/api/internships/:id",
         { id: "@id" },
         {
             update: { method: 'PUT' }
@@ -32,6 +32,8 @@ controller("FormRegistrationCTRL",
         $scope.dummyUsers = data;
     }, function(data) {
         //something went wrong....
+    });
+
     });
 
 
