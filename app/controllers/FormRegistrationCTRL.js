@@ -8,7 +8,7 @@ controller("FormRegistrationCTRL",
     $scope.user={};
 
         $scope.register = function() {
-            //this should navigate sending the registration to the new state.
+            //this function should just send to next view instead of submitting
 
 
             $http({ method: "POST",
