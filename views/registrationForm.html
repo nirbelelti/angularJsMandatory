@@ -1,5 +1,5 @@
 <section>
-    <form name="myform" role="form"
+    <form name="regForm" role="form"
           ng-submit="register()"
           novalidate>
 
@@ -14,7 +14,7 @@
                    ng-model="user.firstname"
                    ng-required="true">
             <p class="error" validationerror
-               ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+               ng-show="regForm.firstname.$invalid && regForm.firstname.$touched">
                 You must fill out your first name.</p>
         </fieldset>
 
@@ -24,7 +24,7 @@
                    ng-model="user.lastname"
                    ng-required="true">
             <p class="error" validationerror
-               ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+               ng-show="regForm.lastname.$invalid && regForm.lastname.$touched">
                 You must fill out your last name.</p>
         </fieldset>
 
@@ -33,7 +33,7 @@
                    placeholder="Email"
                    ng-model="user.email">
             <p class="error" validationerror
-               ng-show="myform.email.$invalid && myform.email.$touched">
+               ng-show="regForm.email.$invalid && regForm.email.$touched">
                 This must be a valid email.</p>
         </fieldset>
 
@@ -43,11 +43,11 @@
                    ng-model="user.password"
                    ng-minlength="6">
             <p class="error" validationerror
-               ng-show="myform.password.$invalid && myform.password.$touched">
+               ng-show="regForm.password.$invalid && regForm.password.$touched">
                 Password must be at least 6 characters</p>
         </fieldset>
 
         <button type="submit" class="btn btn-primary"
-                ng-disabled="myform.$invalid">Submit</button>
+                ng-disabled="regForm.$invalid">Submit</button>
     </form>
 </section>

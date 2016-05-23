@@ -1,5 +1,5 @@
 <section>
-    <form name="myform"
+    <form name="questform"
           ng-submit="register()"
           novalidate>
 
@@ -8,129 +8,77 @@
             <p>It will help to find better matches for you</p>
         </div>
 
-        <fieldset>
-            <input type="date" name="birthdate"
+        <fieldset class="form-group">
+            <label> Date of birth: </label><br>
+            <input class="form-control" type="date" name="birthdate"
                    placeholder="Birth date"
                    ng-model="user.birthdate"
                    ng-required="true">
-            <p class="error validationerror" ng-show="myform.birthdate.$invalid && myform.birthdate.$touched">
+            <p class="error validationerror" ng-show="questform.birthdate.$invalid && questform.birthdate.$touched">
                 You must fill out your birth date.</p>
+        </fieldset>
 
-            Are you:
-            <input type="text" name="gender"
-                   placeholder="Please choose..."
-                   ng-model="user.gender"
-                   ng-required="true">
-            <select name="gender">
+        <fieldset class="form-group">
+            <label for="genderSelect"> Gender: </label><br>
+            <select class="form-control" name="genderSelect" id="genderSelect"
+            ng-model="user.genderSelect"
+            ng-required="true">
+                <option value="">---Please select---</option> <!-- not selected / blank option -->
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
-            <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
-                You must fill out your last name.</p>
-
-
-            <input type="email" name="email"
-                   placeholder="Email"
-                   ng-model="user.email">
-            <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
-                This must be a valid email.</p>
-
-
-
-            <input type="password" name="password"
-                   placeholder="Password"
-                   ng-model="user.password"
-                   ng-minlength="6">
-            <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
-                Password must be at least 6 characters</p>
+            <p class="error validationerror" ng-show="questform.genderSelect.$invalid && questform.genderSelect.$touched">
+                You must choose one.</p>
         </fieldset>
 
-        <button type="submit" class="btn">Submit</button>
+        <fieldset class="form-group">
+            <label for="interestedIn">Im interested to meet :</label><br>
+            <select class="form-control" name="interestedIn" id="interestedIn"
+                    ng-model="user.interestedIn"
+                    ng-required="true">
+                <option value="">---Please select---</option> <!-- not selected / blank option -->
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="female">Both</option>
+            </select>
+            <p class="error validationerror" ng-show="questform.interestedIn.$invalid && questform.interestedIn.$touched">
+                You must choose one.</p>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label for="occupation">Current occupation :</label><br>
+            <select class="form-control" name="occupation" id="occupation"
+                    ng-model="user.occupation"
+                    ng-required="true">
+                <option value="">---Please select---</option> <!-- not selected / blank option -->
+                <option value="working">Working</option>
+                <option value="study">Studying</option>
+                <option value="both">Both</option>
+                <option value="nothing">Nothing...being lazy</option>
+            </select>
+            <p class="error validationerror" ng-show="questform.occupation.$invalid && questform.occupation.$touched">
+                You must choose one.</p>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label for="hobby">Field of interest :</label><br>
+            <select class="form-control" name="hobby" id="hobby"
+                    ng-model="user.hobby"
+                    ng-required="true">
+                <option value="">---Please select---</option> <!-- not selected / blank option -->
+                <option value="sport">Sport</option>
+                <option value="read">Reading</option>
+                <option value="party">Partying</option>
+                <option value="game">Gaming</option>
+                <option value="art">Art</option>
+                <option value="nothing">Nothing from above</option>
+            </select>
+            <p class="error validationerror" ng-show="questform.occupation.$invalid && questform.occupation.$touched">
+                You must choose one.</p>
+        </fieldset>
+
+
+        <button type="submit" class="btn btn-primary"
+                ng-disabled="questform.$invalid">Submit</button>
     </form>
 </section>
-
-
-
-
-<div>
-    <B>I am a:...</B> <BR>
-    <SELECT NAME="Gender">
-        <OPTION SELECTED> Male
-        <OPTION> Female
-
-    </SELECT>
-
-</div>
-
-
-
-<div>
-    <label  class="col-sm-2 control-label">Im interested to meet : </label>
-
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-5">
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Man
-                </label>
-                <label>
-                    <input type="checkbox"> Woman
-                </label>
-                <label>
-                    <input type="checkbox"> Both
-                </label>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div>
-    <B>Some question about myselfe.</B> <BR>
-    <SELECT NAME="Question1">
-        <OPTION SELECTED> Bla bala
-        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
-
-    </SELECT>
-
-</div>
-
-<div>
-    <B>Some question about myselfe.</B> <BR>
-    <SELECT NAME="Question1">
-        <OPTION SELECTED> Bla bala
-        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
-
-    </SELECT>
-
-</div>
-
-<div>
-
-    <B>Some question about my hobby.</B> <BR>
-    <SELECT NAME="Question2">
-        <OPTION SELECTED> Bla bala
-        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
-
-    </SELECT>
-</div>
-
-<div>
-    <B>Some question about my favorite sport.</B> <BR>
-    <SELECT NAME="Question3">
-        <OPTION SELECTED> Bla bala
-        <OPTION> Bla balaBla balaBla balaBla balaBla balaBla bala
-
-    </SELECT>
-
-</div>
-
-<!--and some more of those.....-->
-
-
-
-<button type="submit"  >
-
-    </span>Submit</button>
-
-</form>
