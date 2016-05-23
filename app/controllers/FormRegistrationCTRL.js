@@ -26,7 +26,7 @@ controller("FormRegistrationCTRL",
         }
     );
 
-    //retrieve all internships
+    //retrieve all users
     $scope.usersResource.query(
     function(data) {
         $scope.dummyUsers = data;
