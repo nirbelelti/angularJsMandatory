@@ -27,13 +27,15 @@
 </head>
 <body ng-controller="FormRegistrationCTRL">
 
-<nav>
+<nav role="navigation">
     <div><a href="index.html">MatchUp</a></div>
-    <ul>
-        <li><a ui-sref="registrationForm">Register</a></li>
-        <li><a ui-sref="profile">Profile</a></li>
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a ui-sref="registrationForm">Register</a></li>
+        <li role="presentation" class="active"><a ui-sref="profile">Profile</a></li>
     </ul>
 </nav>
+
+
 
 <div class="container">
 
