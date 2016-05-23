@@ -7,7 +7,7 @@ angular.module('mandatory').
         .state('registrationForm',{
         url: '/registrationForm',
         templateUrl: 'views/registrationForm.html',
-        controller: ''
+        controller: 'FormRegistrationCTRL'
     })
         .state('questionnaireForm',{
         url:'/questionnaireForm',
