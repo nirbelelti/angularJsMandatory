@@ -11,10 +11,8 @@
         <fieldset class="form-group">
             <input type="text" name="firstname" class="form-control"
                    placeholder="First Name"
-
-                   <!--Change user.initials to user.firstname when API is working -->
                    ng-model="user.initials"
-                   ng-required="true">
+                   ng-required="true">   <!--Change ng-model = user.initials to ng-model = user.firstname when API is working -->
             <p class="error" validationerror
                ng-show="regForm.firstname.$invalid && regForm.firstname.$touched">
                 You must fill out your first name.</p>
@@ -23,9 +21,8 @@
         <fieldset class="form-group">
             <input type="text" name="lastname" class="form-control"
                    placeholder="Last Name"
-            <!--Change user.date to user.lastname when API is working -->
                    ng-model="user.date"
-                   ng-required="true">
+                   ng-required="true">  <!--Change ng-model = user.date to ng-model = user.lastname when API is working -->
             <p class="error" validationerror
                ng-show="regForm.lastname.$invalid && regForm.lastname.$touched">
                 You must fill out your last name.</p>
