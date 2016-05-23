@@ -1,5 +1,5 @@
 <section>
-    <form name="questform"
+    <form name="regForm"
           ng-submit="register()"
           novalidate>
 
@@ -14,7 +14,7 @@
                    placeholder="Birth date"
                    ng-model="user.birthdate"
                    ng-required="true">
-            <p class="error validationerror" ng-show="questform.birthdate.$invalid && questform.birthdate.$touched">
+            <p class="error validationerror" ng-show="regForm.birthdate.$invalid && regForm.birthdate.$touched">
                 You must fill out your birth date.</p>
         </fieldset>
 
@@ -27,7 +27,7 @@
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
-            <p class="error validationerror" ng-show="questform.genderSelect.$invalid && questform.genderSelect.$touched">
+            <p class="error validationerror" ng-show="regForm.genderSelect.$invalid && regForm.genderSelect.$touched">
                 You must choose one.</p>
         </fieldset>
 
@@ -41,7 +41,7 @@
                 <option value="female">Female</option>
                 <option value="female">Both</option>
             </select>
-            <p class="error validationerror" ng-show="questform.interestedIn.$invalid && questform.interestedIn.$touched">
+            <p class="error validationerror" ng-show="regForm.interestedIn.$invalid && regForm.interestedIn.$touched">
                 You must choose one.</p>
         </fieldset>
 
@@ -56,7 +56,7 @@
                 <option value="both">Both</option>
                 <option value="nothing">Nothing...being lazy</option>
             </select>
-            <p class="error validationerror" ng-show="questform.occupation.$invalid && questform.occupation.$touched">
+            <p class="error validationerror" ng-show="regForm.occupation.$invalid && regForm.occupation.$touched">
                 You must choose one.</p>
         </fieldset>
 
@@ -73,12 +73,12 @@
                 <option value="art">Art</option>
                 <option value="nothing">Nothing from above</option>
             </select>
-            <p class="error validationerror" ng-show="questform.occupation.$invalid && questform.occupation.$touched">
+            <p class="error validationerror" ng-show="regForm.occupation.$invalid && regForm.occupation.$touched">
                 You must choose one.</p>
         </fieldset>
 
 
         <button type="submit" class="btn btn-primary"
-                ng-disabled="questform.$invalid">Submit</button>
+                ng-disabled="regForm.$invalid">Submit</button>
     </form>
 </section>
