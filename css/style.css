@@ -12,3 +12,11 @@ input.ng-valid.ng-touched {
     padding-bottom: 10px;
     font-size: 13px;
 }
+.myForm .page-header{
+    text-align: center;
+}
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
