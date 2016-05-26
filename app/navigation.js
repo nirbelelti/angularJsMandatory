@@ -15,10 +15,18 @@ angular.module('mandatory').
         controller:'FormRegistrationCTRL'
         })
 
+
+        .state('matches',{
+            url:'/matches',
+            templateUrl:'views/matches.html',
+            controller:'FormRegistrationCTRL',
+        })
+
         .state('profile',{
             url:'/profile',
             templateUrl:'views/profile.html',
             controller:'',
             params: { internshipParameter: null }
+
         });
 });
