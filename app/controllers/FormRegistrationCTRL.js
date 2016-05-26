@@ -26,9 +26,19 @@ controller("FormRegistrationCTRL",
         };
 
 
+
+
+           $http({ method: "GET",
+           url: "http://nodedb2.herokuapp.com/users/GetAll"})
+            .success(function (data) {
+             console.log(data);
+             $scope.user = data;
+
+
+    }).error(function (data) {
+
+           });
     });
-
-
 
 
     var today = new Date();
