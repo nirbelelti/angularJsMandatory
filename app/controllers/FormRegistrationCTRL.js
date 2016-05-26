@@ -13,14 +13,14 @@ controller("FormRegistrationCTRL",
 
             $http({ method: "POST",
                 data: $scope.user,
-                url: "http://angularkea1.azurewebsites.net/api/internships/Create/"})
+                url: "http://nodedb2.herokuapp.com/users/Create"})
                 .success(function(data) {
                     console.log(data);
 
                     //$scope.$parent.dummyInternships.push($scope.internship);
                     //delete the internship from the local array, dummyInternships.
 
-                    $state.go("questionnaireForm");
+                    $state.go("profile");
                 }).error(function(data) {
             });
         };
@@ -37,7 +37,7 @@ controller("FormRegistrationCTRL",
     /*$scope.usersResource =
     $resource(
         "http://angularkea2.azurewebsites.net/api/internships/:id",
-        { id: "@id" },
+        { id: "@id" },dfsaz<dfhydsa<sy
         {
             update: { method: 'PUT' }
         }
