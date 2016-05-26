@@ -41,3 +41,37 @@ input.ng-valid.ng-touched {
     font-weight: 100;
     text-transform: uppercase;
 }
+.navbar-default .navbar-nav>li>a {
+    color: #23C1C4;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    /* color: #555; */
+    border-bottom: solid 3px #FB3B6A;
+    /* background-color: #e7e7e7; */
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a {
+    background-image: none;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+     color: #555;
+    background-color: transparent;
+}
+.input-group .form-control:last-child{
+    border-bottom-right-radius: 0;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #FB3B6A;
+}
+.form-control {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.input-group-addon {
+    color: rgb(187, 104, 156);
+    background-color: rgba(249, 252, 221, 0.71);
+    border:none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+}
