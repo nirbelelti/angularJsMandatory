@@ -1,3 +1,12 @@
+body{
+    background-image: url("../img/login-background.jpg");
+    background-size: cover;
+    background-color: #023E54;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    height: auto;
+}
+
 input.ng-invalid.ng-touched {
     border: 1px solid red;
 }
