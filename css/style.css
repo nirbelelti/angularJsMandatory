@@ -1,3 +1,8 @@
+@font-face {
+    font-family: SUNN;
+    src: url(../fonts/SUNN.otf) format('opentype');
+}
+
 body{
     background-image: url("../img/login-background.jpg");
     background-size: cover;
@@ -28,4 +33,11 @@ input.ng-valid.ng-touched {
     margin: 0;
     background-color: transparent;
     text-align: center;
+}
+
+.container h1{
+    font-family: SUNN;
+    font-size: 5em;
+    font-weight: 100;
+    text-transform: uppercase;
 }
