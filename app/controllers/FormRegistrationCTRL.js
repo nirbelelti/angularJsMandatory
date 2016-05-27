@@ -33,14 +33,9 @@ controller("FormRegistrationCTRL",
     var today = new Date();
 
     //configured $resource
-    /*$scope.usersResource =
+    $scope.usersResource =
     $resource(
-        "http://angularkea2.azurewebsites.net/api/internships/:id",
-        { id: "@id" },dfsaz<dfhydsa<sy
-        {
-            update: { method: 'PUT' }
-        }
-    );
+        "http://nodedb2.herokuapp.com/users/:id", {id:"@id"}, {update: {method: 'PUT'}});
 
     //retrieve all users
     $scope.usersResource.query(
@@ -48,7 +43,7 @@ controller("FormRegistrationCTRL",
         $scope.dummyUsers = data;
     }, function(data) {
         //something went wrong....
-    });*/
+    });
 
 
 
