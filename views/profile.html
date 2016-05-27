@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
 
-</body>
-</html>
+        <thead>
+        <tr>
+            <th></th>
+            <th>
+                Initials
+            </th>
+
+            <th>
+                Date
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="item in dummyUsers" >
+
+            <td>
+                {{item.firstname}}
+            </td>
+            <td>
+                {{item.lastname}}
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+    </div>
