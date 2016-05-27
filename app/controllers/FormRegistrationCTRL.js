@@ -6,9 +6,20 @@ angular.module("mandatory").
 controller("FormRegistrationCTRL",
     function($scope, $state, $resource, $http) {
     $scope.user={};
+        //configured $resource
+        $scope.userResource =
+            $resource(
+                "http://nodedb2.herokuapp.com/users/:id", {id:"@id"}, {update: {method: 'PUT'}});
 
+        //retrieve all users
+        $scope.userResource.query(
+            function(data) {
+                $scope.dummyUsers = data;
+            }, function(data) {
+                //something went wrong....
+            });
         $scope.register = function() {
-            //this function should just send to next view instead of submitting
+
 
 
             $http({ method: "POST",
@@ -16,9 +27,7 @@ controller("FormRegistrationCTRL",
                 url: "http://nodedb2.herokuapp.com/users/Create"})
                 .success(function(data) {
                     console.log(data);
-
-                    //$scope.$parent.dummyInternships.push($scope.internship);
-                    //delete the internship from the local array, dummyInternships.
+                    $scope.$dummyUsers.push($scope.user);
 
                     $state.go("profile");
                 }).error(function(data) {
@@ -26,18 +35,7 @@ controller("FormRegistrationCTRL",
         };
 
 
-    //configured $resource
-    $scope.userResource =
-    $resource(
-        "http://nodedb2.herokuapp.com/users/:id", {id:"@id"}, {update: {method: 'PUT'}});
 
-    //retrieve all users
-    $scope.userResource.query(
-    function(data) {
-        $scope.dummyUsers = data;
-    }, function(data) {
-        //something went wrong....
-    });
 
 
     });
