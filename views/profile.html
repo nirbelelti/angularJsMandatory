@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<<section class="profile">
+    <div ng-model="artist">
+        <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+        <a href="#/details/{{nextItem}}" class="btn btn-left">&gt;</a>
+        <h1>{{artists[whichItem].name}}</h1>
+        <div class="info">
+            <h3>{{ artists[whichItem].reknown }}</h3>
+            <img ng-src="images/{{artists[whichItem].shortname}}_tn.jpg"
+                 alt="Photo of {{artists[whichItem].name}}">
+            <div class="bio">{{artists[whichItem].bio}}</div>
+        </div>
+    </div>
+    <a href="index.html">&laquo; Back to search</a>
+</section>

@@ -1,11 +1,17 @@
-<div class="container">
-    <div class="col-xs-3">
-        <input type="text" class="form-control " ng-model="search"/>
+<section>
+<div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+
+        <input placeholder="Search for matches" type="text" class="form-control"
+               ng-model="search" autofocus/>
     </div>
-</div>
+
 
 <div ng-repeat="">
 
     {{item.initials}} {{item.date | date:'dd-MM-yyyy'}}
 
 </div>
+        </div>
+
+</section>
