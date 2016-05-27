@@ -1,4 +1,4 @@
-<<section class="profile">
+<section class="profile">
     <div ng-model="artist">
         <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
         <a href="#/details/{{nextItem}}" class="btn btn-left">&gt;</a>
@@ -12,3 +12,35 @@
     </div>
     <a href="index.html">&laquo; Back to search</a>
 </section>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+
+        <thead>
+        <tr>
+            <th></th>
+            <th>
+                Initials
+            </th>
+
+            <th>
+                Date
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="item in dummyUsers" >
+
+            <td>
+                {{item.firstname}}
+            </td>
+            <td>
+                {{item.lastname}}
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+    </div>
+
