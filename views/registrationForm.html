@@ -95,11 +95,8 @@
             <label> Date of birth: </label><br>
             <input class="form-control" type="date" name="birthdate"
                    placeholder="Birth date"
-                   ng-model="user.birthdate"
-                   ng-required="true">
+                   ng-model="user.birthdate">
                     </div>
-            <p class="error validationerror" ng-show="regForm.birthdate.$invalid && regForm.birthdate.$touched">
-                You must fill out your birth date.</p>
                     </div>
                 </div>
         </fieldset>
@@ -188,7 +185,7 @@
         </fieldset>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-lg"
+            <button type="submit" class="btn btn-primary btn-lg"
                     ng-disabled="regForm.$invalid">Submit</button>
         </div>
     </form>

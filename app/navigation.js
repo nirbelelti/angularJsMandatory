@@ -15,7 +15,6 @@ angular.module('mandatory').
         controller:'FormRegistrationCTRL'
         })
 
-
         .state('matches',{
             url:'/matches',
             templateUrl:'views/matches.html',
