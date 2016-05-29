@@ -3,13 +3,15 @@
     src: url(../fonts/SUNN.otf) format('opentype');
 }
 
-body{
+html{
     background-image: url("../img/login-background.jpg");
-    background-size: cover;
     background-color: #023E54;
     background-repeat: no-repeat;
     min-height: 100%;
     height: auto;
+}
+body{
+    background-color: transparent;
 }
 
 input.ng-invalid.ng-touched {
@@ -72,4 +74,8 @@ input:-webkit-autofill {
 input:-webkit-autofill:focus {
     -webkit-box-shadow:0 0 0 50px rgba(251, 59, 106, 0.09) inset;
     -webkit-text-fill-color: #333;
+}
+.container .page-content{
+    width: auto;
+    height: auto ;
 }
