@@ -4,12 +4,14 @@
 }
 
 html{
-    background-image: url("../img/login-background.jpg");
+    background: url("../img/login-background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-color: #023E54;
-    background-repeat: no-repeat;
-    min-height: 100%;
-    height: auto;
 }
+
 body{
     background-color: transparent;
 }
@@ -50,7 +52,6 @@ input.ng-valid.ng-touched {
 .navbar-default .navbar-nav>li>a:hover {
     color: #333;
     background-color: transparent;
-    border-bottom: 2px solid #333;;
 }
 .input-group .form-control:last-child{
     border-bottom-right-radius: 0;
@@ -63,8 +64,8 @@ input.ng-valid.ng-touched {
     box-shadow: none;
 }
 .input-group-addon {
-    color: rgb(187, 104, 156);
-    background-color: rgba(249, 252, 221, 0.71);
+    color: #F9FCDD;
+    background-color: rgba(247, 96, 129, 0.47);
     border:none;
 }
 input:-webkit-autofill {
@@ -74,8 +75,4 @@ input:-webkit-autofill {
 input:-webkit-autofill:focus {
     -webkit-box-shadow:0 0 0 50px rgba(251, 59, 106, 0.09) inset;
     -webkit-text-fill-color: #333;
-}
-.container .page-content{
-    width: auto;
-    height: auto ;
 }
