@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="mandatory">
-
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mandatory assignment</title>
@@ -42,13 +40,12 @@
         </div>
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a ui-sref="profile">My Profile</a></li>
-                <li><a ui-sref="matches">My matches</a></li>
+            <ul class="nav navbar-nav text-uppercase">
+                <li><a ui-sref="profile">Profile</a></li>
+                <li><a ui-sref="matches">Matches</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a ui-sref="registrationForm">Register</a></li>
+            <ul class="nav navbar-nav navbar-right text-uppercase">
+                <li><a ui-sref="registrationForm">Register</a></li>
             </ul>
         </div>
     </nav>
@@ -58,7 +55,7 @@
 
 <div class="container">
 
-    <div ui-view=""></div>
+    <div ui-view="" class="page-content"></div>
 
 </div>
 
@@ -67,4 +64,5 @@
 <script src="node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
 
 </body>
+<head>
 </html>
