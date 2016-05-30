@@ -9,7 +9,7 @@ controller("FormRegistrationCTRL",
         //configured $resource
         $scope.userResource =
             $resource(
-                "http://nodedb2.herokuapp.com/users/:id", {id:"@id"}, {update: {method: 'PUT'}});
+                "http://nodedb2.herokuapp.com/users/getall", {id:"@id"}, {update: {method: 'PUT'}});
 
         //retrieve all users
         $scope.userResource.query(
