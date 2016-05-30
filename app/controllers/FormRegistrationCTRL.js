@@ -1,16 +1,11 @@
-/**
- * Created by fiejelved on 18/05/16.
- */
-
 angular.module("mandatory").
 controller("FormRegistrationCTRL",
     function($scope, $state, $resource, $http) {
-    $scope.user={};
+        $scope.user={};
         $scope.users = [];
 
         $scope.register = function() {
-            //this function should just send to next view instead of submitting
-
+            if ($scope.regForm.$valid) {
 
             $http({ method: "POST",
                 data: $scope.user,
@@ -20,30 +15,28 @@ controller("FormRegistrationCTRL",
 
                     $scope.users.push($scope.user);
 
-
-                    //delete the internship from the local array, dummyInternships.
-
                     $state.go("profile");
                 }).error(function(data) {
             });
+        }
         };
 
 
 
 
-           $http({ method: "GET",
-           url: "http://nodedb2.herokuapp.com/users/GetAll"})
+        $http({ method: "GET",
+            url: "http://nodedb2.herokuapp.com/users/GetAll"})
             .success(function (data) {
-             console.log(data);
-             $scope.users = data;
+                console.log(data);
+                $scope.users = data;
 
 
-    }).error(function (data) {
+            }).error(function (data) {
 
-           });
+        });
 
         $scope.deleteUser = function(user) {
-      console.log("delete user");
+            console.log("delete user");
 
             console.log(user);
 
@@ -63,7 +56,7 @@ controller("FormRegistrationCTRL",
                             $scope.users.splice(i,1);
                         }
                     }
-                    console.log($scope.internship);
+
                     console.log("iteme removed");
                     alert("item  deleted");
 
@@ -113,39 +106,4 @@ controller("FormRegistrationCTRL",
 
 
     });
-
-
-
-    var today = new Date();
-
-    //configured $resource
-    /*$scope.usersResource =
-    $resource(
-        "http://angularkea2.azurewebsites.net/api/internships/:id",
-        { id: "@id" },dfsaz<dfhydsa<sy
-        {
-            update: { method: 'PUT' }
-        }
-    );
-
-    //retrieve all users
-    $scope.usersResource.query(
-    function(data) {
-        $scope.dummyUsers = data;
-    }, function(data) {
-        //something went wrong....
-    });*/
-
-
-
-    //$http({ method: "GET",
-    //    url: "http://nodedb.herokuapp.com/users/getAll" })
-    //    .success(function(data) {
-    //        console.log(data);
-    //        $scope.dummyUsers = data;
-    //
-    //
-    //    }).error(function(data) {
-    //
-    //    });
 
