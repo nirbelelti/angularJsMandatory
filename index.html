@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="mandatory">
-
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mandatory assignment</title>
@@ -47,7 +45,7 @@
                 <li><a ui-sref="matches">Matches</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right text-uppercase">
-                <li class="active"><a ui-sref="registrationForm">Register</a></li>
+                <li><a ui-sref="registrationForm">Register</a></li>
             </ul>
         </div>
     </nav>
@@ -57,7 +55,7 @@
 
 <div class="container">
 
-    <div ui-view=""></div>
+    <div ui-view="" class="page-content"></div>
 
 </div>
 
@@ -66,4 +64,5 @@
 <script src="node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
 
 </body>
+<head>
 </html>

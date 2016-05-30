@@ -19,7 +19,7 @@
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" name="firstname" class="form-control"
                    placeholder="First Name"
-                   ng-model="user.initials"
+                   ng-model="user.firstname"
                    ng-required="true">   <!--Change ng-model = user.initials to ng-model = user.firstname when API is working -->
                     </div>
                     <p class="error" validationerror
@@ -36,7 +36,7 @@
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" name="lastname" class="form-control"
                    placeholder="Last Name"
-                   ng-model="user.date"
+                   ng-model="user.lastname"
                    ng-required="true">  <!--Change ng-model = user.date to ng-model = user.lastname when API is working -->
                     </div>
                         <p class="error" validationerror
@@ -95,11 +95,8 @@
             <label> Date of birth: </label><br>
             <input class="form-control" type="date" name="birthdate"
                    placeholder="Birth date"
-                   ng-model="user.birthdate"
-                   ng-required="true">
+                   ng-model="user.birthdate">
                     </div>
-            <p class="error validationerror" ng-show="regForm.birthdate.$invalid && regForm.birthdate.$touched">
-                You must fill out your birth date.</p>
                     </div>
                 </div>
         </fieldset>
@@ -188,7 +185,7 @@
         </fieldset>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-lg"
+            <button type="submit" class="btn btn-primary btn-lg"
                     ng-disabled="regForm.$invalid">Submit</button>
         </div>
     </form>

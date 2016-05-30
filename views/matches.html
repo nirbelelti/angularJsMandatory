@@ -1,11 +1,50 @@
-<div class="container">
-    <div class="col-xs-3">
-        <input type="text" class="form-control " ng-model="search"/>
+<section>
+<div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+
+        <input placeholder="Search for matches" type="text" class="form-control"
+               ng-model="search" autofocus/>
     </div>
-</div>
+
 
 <div ng-repeat="">
 
     {{item.initials}} {{item.date | date:'dd-MM-yyyy'}}
 
 </div>
+        </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+
+            <thead>
+            <tr>
+                <th></th>
+                <th>
+                    Initials
+                </th>
+
+                <th>
+                    Date
+                </th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="item in dummyUsers" >
+
+                <td>
+                    {{item.firstname}}
+                </td>
+                <td>
+                    {{item.lastname}}
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+</section>
