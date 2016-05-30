@@ -1,7 +1,7 @@
 <section class="myForm">
     <form name="regForm" role="form"
           ng-submit="register()"
-          my-enter=""
+          my-enter="register()"
           novalidate>
 
         <div class="row">
@@ -24,7 +24,7 @@
                    ng-required="true">   <!--Change ng-model = user.initials to ng-model = user.firstname when API is working -->
                     </div>
                     <p class="error" validationerror
-                       ng-show="regForm.firstname.$invalid && regForm.firstname.$touched">
+                       ng-show="regForm.firstname.$invalid && regForm.$submitted">
                         You must fill out your first name.</p>
                 </div>
             </div>
@@ -186,8 +186,7 @@
         </fieldset>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary btn-lg"
-                    ng-disabled="regForm.$invalid">Submit</button>
+            <input type="submit" value="Submit" class="btn btn-primary btn-lg"/>
         </div>
     </form>
 </section>
