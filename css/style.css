@@ -22,9 +22,10 @@ input.ng-invalid.ng-touched {
 input.ng-valid.ng-touched {
     border: 1px solid green;
 }
-.ng-invalid .btn {
+.ng-invalid .btn, .ng-invalid .btn:hover {
     background: gray;
 }
+
 .error {
     color: red;
     padding-bottom: 10px;
@@ -75,4 +76,7 @@ input:-webkit-autofill {
 input:-webkit-autofill:focus {
     -webkit-box-shadow:0 0 0 50px rgba(251, 59, 106, 0.09) inset;
     -webkit-text-fill-color: #333;
+}
+.btn[disabled]{
+    cursor: default;
 }
