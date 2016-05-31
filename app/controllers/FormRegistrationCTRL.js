@@ -72,7 +72,7 @@
                         console.log("iteme removed");
                         alert("item  deleted");
 
-                        $state.go("profile")
+                        $state.go("registrationForm")
 
                     }).error(function(data) {
                 });
@@ -106,14 +106,22 @@
                         console.log("update " + user._id);
 
 
-                        $state.go("profile");
+                        $state.go("questionnaireForm");
                     }).error(function (data) {
 
                 });
             };
 
 
+            $scope.editProfile = function(profileToCopy) {
+                //this should navigate sending the internship to the new state.
 
+                //copy the object for editing
+                var profileToSend = angular.copy(profileToCopy);
+
+                $state.go("questionnaireForm", //pass internship copy to the state
+                    { profileParameter: profileToSend });
+            };
 
 
 

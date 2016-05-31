@@ -12,7 +12,8 @@ angular.module('mandatory').
         .state('questionnaireForm',{
         url:'/questionnaireForm',
         templateUrl: 'views/questionnaireForm.html',
-        controller:'FormRegistrationCTRL'
+        controller:'FormRegistrationCTRL',
+            params: { profileParameter: null }
         })
 
         .state('matches',{
@@ -25,7 +26,7 @@ angular.module('mandatory').
             url:'/profile',
             templateUrl:'views/profile.html',
             controller:'',
-            params: { internshipParameter: null }
+
 
         });
 });
