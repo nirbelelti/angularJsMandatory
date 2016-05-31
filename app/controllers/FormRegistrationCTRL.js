@@ -59,7 +59,7 @@ controller("FormRegistrationCTRL",
             $http({ method: "DELETE",
                 data: $scope.user,
 
-                url: "http://nodedb2.herokuapp.com/users/Delete/" + user._id })
+                url: "http://nodedb2.herokuapp.com/users/Delete/"+ user._id })
 
 
                 .success(function(data) {
@@ -73,10 +73,10 @@ controller("FormRegistrationCTRL",
                         }
                     }
                     console.log($scope.internship);
-                    console.log("iteme removed");
+                    console.log("item removed");
                     alert("item  deleted");
 
-                    $state.go("registrationForm")
+                    $state.go("matches")
 
                 }).error(function(data) {
             });
@@ -92,7 +92,7 @@ controller("FormRegistrationCTRL",
                 method: "PUT",
                 data: $scope.user,
 
-                url: "http://nodedb2.herokuapp.com/users/Update/" + user._id
+                url: "http://nodedb2.herokuapp.com/users/Update/"+ user._id
             })
                 .success(function (data) {
 
@@ -110,7 +110,7 @@ controller("FormRegistrationCTRL",
 
                     }
 
-                    console.log("update " + user._id);
+                    console.log("update"+ user._id);
 
 
                     $state.go("profile");
