@@ -41,7 +41,7 @@
                    ng-required="true">  <!--Change ng-model = user.date to ng-model = user.lastname when API is working -->
                     </div>
                         <p class="error" validationerror
-               ng-show="regForm.lastname.$invalid && regForm.lastname.$touched">
+                           ng-show="regForm.firstname.$invalid && regForm.$submitted">
                 You must fill out your last name.</p>
                 </div>
             </div>
