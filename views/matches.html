@@ -29,8 +29,7 @@
             <ul>
                 <li ng-repeat="item in users | filter: search | orderBy: matchesOrder:direction">
                     <section class="col-sm-6">
-                        <h2>{{item.firstname }}</h2>
-                        <h2>{{item.lastname }}</h2>
+                        <h2>{{item.firstname}} {{item.lastname}}</h2>
                         <p>{{item.birthdate }}</p>
                         <p>{{item.email }}</p>
                         <button type="button" class="btn btn-default" aria-label="Left Align"ng-click="deleteUser(item)">
