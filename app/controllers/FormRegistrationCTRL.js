@@ -36,9 +36,6 @@
     }
             };
 
-
-
-
                $http({ method: "GET",
                url: "http://nodedb2.herokuapp.com/users/GetAll"})
                 .success(function (data) {

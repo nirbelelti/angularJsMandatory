@@ -31,7 +31,7 @@ input.ng-valid.ng-touched {
     padding-bottom: 10px;
     font-size: 13px;
 }
-.myForm .page-header{
+.page-header{
     text-align: center;
 }
 .form-actions {
@@ -40,7 +40,7 @@ input.ng-valid.ng-touched {
     text-align: center;
 }
 
-.coverer h1{
+h1{
     font-family: SUNN;
     font-size: 5em;
     font-weight: 100;
@@ -102,4 +102,20 @@ input:-webkit-autofill:focus {
 .matches ul li{
     list-style: none;
 
+}
+.matches{
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.profile-btn{
+    text-align: center;
+}
+.profile-header{
+    margin-bottom:10%;
+    text-align: center;
+}
+.profile{
+    margin-bottom: 10%;
 }
